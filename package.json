@@ -2,9 +2,12 @@
   "name": "redditdailysoup",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf ./build && tsc",
+    "start:dev": "nodemon",
+    "test": "jest",
+    "start": "npm run build && node build/index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +18,18 @@
   "bugs": {
     "url": "https://github.com/cameronbroe/RedditDailySoup/issues"
   },
-  "homepage": "https://github.com/cameronbroe/RedditDailySoup#readme"
+  "homepage": "https://github.com/cameronbroe/RedditDailySoup#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.10.1",
+    "jest": "^26.4.2",
+    "nodemon": "^2.0.4",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
