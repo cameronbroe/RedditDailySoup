@@ -1,3 +1,5 @@
+# Service Descriptions
+
 * User Management Service
   * Handles user creation and deletion
   * Handles tracking what delivery methods user wants newsletter delivered by
