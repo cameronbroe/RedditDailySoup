@@ -27,5 +27,6 @@ Detailed API documentation is hosted on GitHub Pages at https://cameronbroe.gith
 
 For the actual email sends, the service has an in-process cron-like scheduler that runs a function every minute.
 This function queries the database for users that should have an email sent at the current time in relation to UTC.
-It then queries Reddit's API to get the list of top posts for each of the user's favorite subreddits.
+It then queries Reddit's API to get the list of top posts for each of the user's favorite subreddits. After it collects
+all of this information, it sends out a request to the email service to actually render and send out the email.
 
