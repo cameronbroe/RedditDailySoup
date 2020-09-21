@@ -13,9 +13,9 @@ export interface IUser {
 }
 
 export function commitToUser(user: IUser, data: any) {
-    user.name = data.name ? data.name : user.name;
-    user.email = data.email ? data.email : user.email;
-    user.sendTime = data.sendTime ? data.sendTime : user.sendTime;
-    user.emailsEnabled = data.emailsEnabled ? data.emailsEnabled : user.emailsEnabled;
-    user.favoriteSubreddits = data.favoriteSubreddits ? data.favoriteSubreddits : user.favoriteSubreddits;
+    user.name = data.name !== undefined ? data.name : user.name;
+    user.email = data.email !== undefined ? data.email : user.email;
+    user.sendTime = data.sendTime !== undefined ? data.sendTime : user.sendTime;
+    user.emailsEnabled = data.emailsEnabled !== undefined ? data.emailsEnabled : user.emailsEnabled;
+    user.favoriteSubreddits = data.favoriteSubreddits !== undefined ? data.favoriteSubreddits : user.favoriteSubreddits;
 }
