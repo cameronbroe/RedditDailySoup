@@ -1,4 +1,6 @@
-# Service Descriptions
+![Service architecture](ServiceArchitecture.png?raw=true)
+
+# Service Architecture
 
 * User Management Service
   * Handles user creation and deletion
